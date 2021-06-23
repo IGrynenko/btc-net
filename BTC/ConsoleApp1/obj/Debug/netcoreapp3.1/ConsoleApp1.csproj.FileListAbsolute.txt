@@ -1,0 +1,17 @@
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.exe
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.deps.json
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.json
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.runtimeconfig.dev.json
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.dll
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\ConsoleApp1.pdb
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\CsvHelper.dll
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\BTC.Services.dll
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\BTC.Services.pdb
+D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.AssemblyReference.cache
+D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfoInputs.cache
+D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.AssemblyInfo.cs
+D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.csproj.CopyComplete
+D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
+D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
+D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "DVd5ufsJBnsTS7CMv+OvlY0exgB1a1eVMics72yVC/853TYyfrQVUl4H0SAoV30vpefefuv5RTFBgFNsssX2Bg==",
+  "success": true,
+  "projectFilePath": "D:\\repositories\\github\\btc-net\\BTC\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gryne\\.nuget\\packages\\csvhelper\\27.1.0\\csvhelper.27.1.0.nupkg.sha512",
+    "C:\\Users\\gryne\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\gryne\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\gryne\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

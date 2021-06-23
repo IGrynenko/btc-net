@@ -1,0 +1,9 @@
+D:\repositories\github\btc-net\BTC\BTC.Services\bin\Debug\netcoreapp3.1\BTC.Services.deps.json
+D:\repositories\github\btc-net\BTC\BTC.Services\bin\Debug\netcoreapp3.1\BTC.Services.dll
+D:\repositories\github\btc-net\BTC\BTC.Services\bin\Debug\netcoreapp3.1\BTC.Services.pdb
+D:\repositories\github\btc-net\BTC\BTC.Services\obj\Debug\netcoreapp3.1\BTC.Services.csproj.AssemblyReference.cache
+D:\repositories\github\btc-net\BTC\BTC.Services\obj\Debug\netcoreapp3.1\BTC.Services.AssemblyInfoInputs.cache
+D:\repositories\github\btc-net\BTC\BTC.Services\obj\Debug\netcoreapp3.1\BTC.Services.AssemblyInfo.cs
+D:\repositories\github\btc-net\BTC\BTC.Services\obj\Debug\netcoreapp3.1\BTC.Services.csproj.CoreCompileInputs.cache
+D:\repositories\github\btc-net\BTC\BTC.Services\obj\Debug\netcoreapp3.1\BTC.Services.dll
+D:\repositories\github\btc-net\BTC\BTC.Services\obj\Debug\netcoreapp3.1\BTC.Services.pdb
