@@ -5,6 +5,7 @@ using System.Text;
 using System.IO;
 using BTC.Services.Interfaces;
 using BTC.Services.Models;
+using BTC.API.Interfaces;
 
 namespace BTC.Services
 {

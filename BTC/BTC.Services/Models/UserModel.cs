@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BTC.API.Models
+namespace BTC.Services.Models
 {
     public class UserModel
     {

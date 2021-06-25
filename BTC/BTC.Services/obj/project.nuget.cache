@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "L+3hGdewtmyjKrYWmAqH5vZLI8ZS7emZeU16lWnnvH7/mMv9vFZTaBLobdiJobFtTn/WPjRsQfcLP7btMNeBNg==",
+  "dgSpecHash": "Fo42d8lbZRcdFPj2DqplBidI2CCQTZ6dRUWS2QSlfHCueBMxRAPoDg96HyoFboBMF3ApmUdHiXsBO9wA4CPSlA==",
   "success": true,
   "projectFilePath": "D:\\repositories\\github\\btc-net\\BTC\\BTC.Services\\BTC.Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\gryne\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\gryne\\.nuget\\packages\\csvhelper\\27.1.0\\csvhelper.27.1.0.nupkg.sha512",
     "C:\\Users\\gryne\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\gryne\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\gryne\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+    "C:\\Users\\gryne\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\gryne\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

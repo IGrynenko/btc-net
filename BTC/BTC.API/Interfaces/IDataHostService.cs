@@ -1,4 +1,4 @@
-﻿namespace BTC.Services.Interfaces
+﻿namespace BTC.API.Interfaces
 {
     public interface IDataHostService
     {
