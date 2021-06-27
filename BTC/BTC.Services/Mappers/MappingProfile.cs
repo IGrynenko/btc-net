@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BTC.Services.Mappers
 {
-    public class MappingProfile : Profile
+    public partial class MappingProfile : Profile
     {
         public MappingProfile()
         {

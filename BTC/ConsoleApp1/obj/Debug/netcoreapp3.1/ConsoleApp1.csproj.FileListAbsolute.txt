@@ -15,3 +15,6 @@ D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleAp
 D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.dll
 D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.pdb
 D:\repositories\github\btc-net\BTC\ConsoleApp1\obj\Debug\netcoreapp3.1\ConsoleApp1.genruntimeconfig.cache
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\AutoMapper.dll
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\repositories\github\btc-net\BTC\ConsoleApp1\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll

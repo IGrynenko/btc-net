@@ -35,7 +35,9 @@ namespace BTC.API
 
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<CoinApiSettings>(Configuration.GetSection("CoinAPI"));
             services.Configure<JwtTokenSettings>(Configuration.GetSection("Authentication"));
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(
                     opt =>
@@ -59,6 +61,7 @@ namespace BTC.API
             });
 
             services.AddControllers();
+            services.AddHttpClient();
 
             services.AddSingleton(mappingConfig.CreateMapper());
             services.AddSingleton<IDataWorker<User>, DataWorker<User>>(_ 
@@ -66,6 +69,7 @@ namespace BTC.API
 
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IDataHostService, DataHostService>();
+            services.AddTransient<ICoinApiRequestSender, CoinApiRequestSender>();
 
             services.AddScoped<ITokenService, TokenService>();
         }

@@ -21,7 +21,7 @@ namespace BTC.Services
             _mapper = mapper;
         }
 
-        public async Task<UserModel> AddUser(UserModel model)
+        public async Task<User> AddUser(UserModel model)
         {
             if (model == null && !string.IsNullOrEmpty(model.Name) && !string.IsNullOrEmpty(model.Password))
                 throw new ArgumentNullException();
@@ -29,16 +29,12 @@ namespace BTC.Services
             var existingUser = await GetUser(model);
 
             if (existingUser != null)
-            {
-                //ex?
                 return null;
-            }
 
             var user = _mapper.Map<User>(model);
             _dataWorker.WriteTable(user);
 
-            //return name and id
-            return model;
+            return user;
         }
 
         public async Task<IEnumerable<User>> GetUsers()

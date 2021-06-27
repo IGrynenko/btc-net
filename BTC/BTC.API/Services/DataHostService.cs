@@ -7,7 +7,7 @@ using BTC.Services.Interfaces;
 using BTC.Services.Models;
 using BTC.API.Interfaces;
 
-namespace BTC.Services
+namespace BTC.API.Services
 {
     public class DataHostService : IDataHostService
     {
