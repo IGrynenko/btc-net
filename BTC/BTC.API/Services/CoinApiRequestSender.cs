@@ -38,9 +38,8 @@ namespace BTC.API.Services
                     var currencyInfo = JsonConvert.DeserializeObject<CurrencyInfo>(response.Content);
                     return currencyInfo;
                 }
-                //add
+                return null;
             }
-            //add
             return null;
 
         }

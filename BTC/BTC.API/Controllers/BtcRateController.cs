@@ -29,6 +29,9 @@ namespace BTC.API.Controllers
             var subPath = BuildSubPath(Currency.BTC, Currency.UAH);
             var result = await _coinApiRequestSender.SendGetRequest(subPath);
 
+            if (result == null)
+                return StatusCode(500, "Couldn't get response from coinapi.io");
+
             return Ok(result);
         }
 
