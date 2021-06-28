@@ -35,6 +35,12 @@ namespace BTC.API
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile<MappingProfile>();
+            });
+            var mapper = mappingConfig.CreateMapper();        
+
             services.Configure<CoinApiSettings>(Configuration.GetSection("CoinAPI"));
             services.Configure<JwtTokenSettings>(Configuration.GetSection("Authentication"));
 
@@ -53,17 +59,11 @@ namespace BTC.API
                             ValidateIssuer = true,
                             ValidIssuer = Configuration.GetSection("Authentication:Issuer").Value
                         };
-                    });
-
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-                mc.AddProfile<MappingProfile>();
-            });
+                    });  
 
             services.AddControllers();
-            services.AddHttpClient();
 
-            services.AddSingleton(mappingConfig.CreateMapper());
+            services.AddSingleton(mapper);
             services.AddSingleton<IDataWorker<User>, DataWorker<User>>(_ 
                 => new DataWorker<User>(Configuration.GetSection("MainFolder").Value + "\\" + Configuration.GetSection("DataSource:Users").Value));
 
@@ -74,7 +74,7 @@ namespace BTC.API
             services.AddScoped<ITokenService, TokenService>();
         }
 
-        // ADD exeptions middleware
+        // TODO: add exeptions middleware
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDataHostService dataHostService)
         {
             if (env.IsDevelopment())

@@ -1,14 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BTC.Services.Models;
 
 namespace BTC.API.Models
 {
-    public class UserValidationSuccessResponse
+    public class UserValidationSuccessResponse : SigningupSuccessResponse
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
         public string Token { get; set; }
+
+        public UserValidationSuccessResponse(User user) : base(user) { }
+
+        public UserValidationSuccessResponse(User user, string token) : this(user)
+        {
+            Token = token;
+        }
     }
 }

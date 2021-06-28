@@ -1,7 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.IO;
 using BTC.Services.Interfaces;
 using BTC.Services.Models;

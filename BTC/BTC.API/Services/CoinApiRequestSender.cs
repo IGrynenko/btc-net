@@ -1,41 +1,53 @@
 ﻿using BTC.API.Helpers;
 using BTC.API.Interfaces;
 using Microsoft.Extensions.Options;
+using RestSharp;
+using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
 using System.Threading.Tasks;
+using BTC.API.Models;
 
 namespace BTC.API.Services
 {
-    public class CoinApiRequestSender : ICoinApiRequestSender
+    public class CoinApiRequestSender : ICoinApiRequestSender, IDisposable
     {
-        private readonly IHttpClientFactory _clientFactory;
         private readonly IOptions<CoinApiSettings> _coinApiSettings;
+        private RestClient _client;
 
-        public CoinApiRequestSender(IHttpClientFactory clientFactory, IOptions<CoinApiSettings> coinApiSettings)
+        public CoinApiRequestSender(IOptions<CoinApiSettings> coinApiSettings)
         {
-            _clientFactory = clientFactory;
             _coinApiSettings = coinApiSettings;
+            _client = new RestClient();
+            _client.BaseUrl = new Uri(coinApiSettings.Value.Path);
         }
 
-        public void SendGetRequest(string subPath)
+        public async Task<CurrencyInfo> SendGetRequest(string subPath = null)
         {
-            var client = _clientFactory.CreateClient();
-            var request = new HttpRequestMessage()
-            {
-                Method = HttpMethod.Get,
-                RequestUri = new Uri(_coinApiSettings.Value.Path + subPath)
-            };
-            request.Headers.Add("X-CoinAPI-Key", _coinApiSettings.Value.Key);
+            var request = new RestRequest(Method.GET);
 
-            var response = client.SendAsync(request);
+            if (!string.IsNullOrEmpty(subPath))
+                _client.BaseUrl = new Uri(_coinApiSettings.Value.Path + subPath);
 
-            if (response.IsCompletedSuccessfully)
+            request.AddHeader("X-CoinAPI-Key", _coinApiSettings.Value.Key);
+            var response = await _client.ExecuteAsync(request);
+
+            if (response != null)
             {
-                var result = response.Result;
+                if (response.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    var currencyInfo = JsonConvert.DeserializeObject<CurrencyInfo>(response.Content);
+                    return currencyInfo;
+                }
+                //add
             }
+            //add
+            return null;
+
+        }
+
+        public void Dispose()
+        {
+            _client = null;
         }
     }
 }

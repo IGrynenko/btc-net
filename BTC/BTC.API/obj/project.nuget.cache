@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RND8hyXFbGJzxbHAUXtPC87D/PaAU0ySKhRhCUfWA/Bj/dzYoca/0yYMtqirWTRMhowEo3ylfySDu94cY54l0A==",
+  "dgSpecHash": "Gm7dAwgRuvesYf2LZUyBCn8f08JntCB/+P3dYpVczT7aOJKS8/vafy+OpxWh1HPK89kAGDdLR5klH4jbs87dSg==",
   "success": true,
   "projectFilePath": "D:\\repositories\\github\\btc-net\\BTC\\BTC.API\\BTC.API.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\gryne\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\gryne\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\gryne\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\gryne\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
     "C:\\Users\\gryne\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\gryne\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\gryne\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

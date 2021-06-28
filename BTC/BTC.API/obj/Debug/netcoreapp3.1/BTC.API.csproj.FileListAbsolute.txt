@@ -34,3 +34,4 @@ D:\repositories\github\btc-net\BTC\BTC.API\bin\Debug\netcoreapp3.1\Microsoft.Ide
 D:\repositories\github\btc-net\BTC\BTC.API\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\repositories\github\btc-net\BTC\BTC.API\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 D:\repositories\github\btc-net\BTC\BTC.API\bin\Debug\netcoreapp3.1\CoinAPI.REST.V1.dll
+D:\repositories\github\btc-net\BTC\BTC.API\bin\Debug\netcoreapp3.1\RestSharp.dll

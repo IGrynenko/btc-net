@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BTC.Services.Models;
 
 namespace BTC.API.Models
 {
@@ -9,5 +6,11 @@ namespace BTC.API.Models
     {
         public string Id { get; set; }
         public string Name { get; set; }
+
+        public SigningupSuccessResponse(User user)
+        {
+            Id = user.Id.ToString();
+            Name = user.Name;
+        }
     }
 }

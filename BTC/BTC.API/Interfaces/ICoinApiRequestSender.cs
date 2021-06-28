@@ -1,7 +1,10 @@
-﻿namespace BTC.API.Interfaces
+﻿using BTC.API.Models;
+using System.Threading.Tasks;
+
+namespace BTC.API.Interfaces
 {
     public interface ICoinApiRequestSender
     {
-        void SendGetRequest(string subPath);
+        Task<CurrencyInfo> SendGetRequest(string subPath);
     }
 }

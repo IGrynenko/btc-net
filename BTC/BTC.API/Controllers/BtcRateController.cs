@@ -1,11 +1,9 @@
 ﻿using BTC.API.Interfaces;
+using BTC.API.Models;
 using BTC.Services.Helpers;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using static BTC.Services.Helpers.Dictionaries;
 
@@ -15,8 +13,9 @@ namespace BTC.API.Controllers
     [ApiController]
     public class BtcRateController : ControllerBase
     {
-        private ICoinApiRequestSender _coinApiRequestSender;
-        private readonly Func<string, string, string, string> _subPath = (idBase, idQuote, time) => $"/v1/exchangerate/{idBase}/{idQuote}?time={time}";
+        private readonly ICoinApiRequestSender _coinApiRequestSender;
+        private readonly Func<string, string, string> _subPath = (idBase, idQuote)
+            => $"v1/exchangerate/{idBase}/{idQuote}";
 
         public BtcRateController(ICoinApiRequestSender coinApiRequestSender)
         {
@@ -25,17 +24,17 @@ namespace BTC.API.Controllers
 
         [HttpGet]
         [Authorize]
-        public OkResult GetBtcRateInUah()
+        public async Task<ActionResult<CurrencyInfo>> GetBtcRateInUah()
         {
             var subPath = BuildSubPath(Currency.BTC, Currency.UAH);
-            _coinApiRequestSender.SendGetRequest(subPath);
+            var result = await _coinApiRequestSender.SendGetRequest(subPath);
 
-            return Ok();
+            return Ok(result);
         }
 
-        private string BuildSubPath(Currency crypro, Currency fiat, string time = null)
+        private string BuildSubPath(Currency crypro, Currency fiat)
         {
-            return _subPath.Invoke(Currencies[crypro], Currencies[fiat], time);
+            return _subPath.Invoke(Currencies[crypro], Currencies[fiat]);
         }
     }
 }
