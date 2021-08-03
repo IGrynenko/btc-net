@@ -26,12 +26,19 @@ namespace BTC.API.Controllers
         [HttpPost("create")]
         public async Task<IActionResult> SignupUser([FromBody] UserModel model)
         {
-            var user = await _userService.AddUser(model); //add try catch
+            try
+            {
+                var user = await _userService.AddUser(model);
 
-            if (user == null)
-                return BadRequest(new { Message = "User already exists" });
+                if (user == null)
+                    return BadRequest(new { Message = "User already exists" });
 
-            return Ok(new SigningupSuccessResponse(user));
+                return Ok(new SigningupSuccessResponse(user));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { Message = ex.Message });
+            }
         }
 
         [HttpPost("login")]
