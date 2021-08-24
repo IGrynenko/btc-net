@@ -20,8 +20,11 @@ namespace BTC.API.Services
             _jwtTokenSettings = options.Value;
         }
 
-        public string GenerateJwtToken(User user)
+        public string GenerateJwtToken()
         {
+            if (string.IsNullOrEmpty(_jwtTokenSettings.Key))
+                throw new ArgumentException("Key hasn't been provided");
+
             var timeNow = DateTime.Now;
             var timeSpan = double.TryParse(_jwtTokenSettings.LifeSpan, out double time) ? time : defaultTime;
             var tokenHandler = new JwtSecurityTokenHandler();

@@ -24,7 +24,7 @@ namespace BTC.API.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> SignupUser([FromBody] UserModel model)
+        public async Task<ActionResult<SigningupSuccessResponse>> SignupUser([FromBody] UserModel model)
         {
             try
             {
@@ -37,12 +37,12 @@ namespace BTC.API.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new { Message = ex.Message });
+                return BadRequest(new { Message = "Incorrect user information" });
             }
         }
 
         [HttpPost("login")]
-        public async Task<ActionResult<bool>> ValidateUser([FromBody] UserModel model)
+        public async Task<ActionResult<UserValidationSuccessResponse>> ValidateUser([FromBody] UserModel model)
         {
             try
             {
@@ -50,7 +50,7 @@ namespace BTC.API.Controllers
 
                 if (user != null)
                 {
-                    var token = _tokenService.GenerateJwtToken(user);
+                    var token = _tokenService.GenerateJwtToken();
                     var response = new UserValidationSuccessResponse(user, token);
 
                     return Ok(response);
@@ -61,7 +61,7 @@ namespace BTC.API.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, new { Message = ex.Message });
+                return BadRequest(new { Message = "Incorrect user information" });
             }
         }
     }

@@ -12,12 +12,12 @@ namespace BTC.API.Services
     public class CoinApiRequestSender : ICoinApiRequestSender, IDisposable
     {
         private readonly IOptions<CoinApiSettings> _coinApiSettings;
-        private RestClient _client;
+        private IRestClient _client;
 
-        public CoinApiRequestSender(IOptions<CoinApiSettings> coinApiSettings)
+        public CoinApiRequestSender(IOptions<CoinApiSettings> coinApiSettings, IRestClient client)
         {
             _coinApiSettings = coinApiSettings;
-            _client = new RestClient();
+            _client = client;
             _client.BaseUrl = new Uri(coinApiSettings.Value.Path);
         }
 
@@ -31,17 +31,13 @@ namespace BTC.API.Services
             request.AddHeader("X-CoinAPI-Key", _coinApiSettings.Value.Key);
             var response = await _client.ExecuteAsync(request);
 
-            if (response != null)
+            if (response != null && response.StatusCode == System.Net.HttpStatusCode.OK)
             {
-                if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                {
-                    var currencyInfo = JsonConvert.DeserializeObject<CurrencyInfo>(response.Content);
-                    return currencyInfo;
-                }
-                return null;
+                var currencyInfo = JsonConvert.DeserializeObject<CurrencyInfo>(response.Content);
+                return currencyInfo;
             }
-            return null;
 
+            return null;
         }
 
         public void Dispose()

@@ -4,6 +4,6 @@ namespace BTC.API.Interfaces
 {
     public interface ITokenService
     {
-        string GenerateJwtToken(User user);
+        string GenerateJwtToken();
     }
 }

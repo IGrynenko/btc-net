@@ -22,7 +22,7 @@ namespace BTC.Services
 
         public async Task<User> AddUser(UserModel model)
         {
-            if (model == null && !string.IsNullOrEmpty(model.Name) && !string.IsNullOrEmpty(model.Password))
+            if (model == null || string.IsNullOrEmpty(model.Name) || string.IsNullOrEmpty(model.Password))
                 throw new ArgumentNullException();
 
             var existingUser = await GetUser(model);
@@ -56,7 +56,7 @@ namespace BTC.Services
 
         public async Task<User> GetUser(UserModel model)
         {
-            if (model == null && !string.IsNullOrEmpty(model.Name) && !string.IsNullOrEmpty(model.Password))
+            if (model == null || string.IsNullOrEmpty(model.Name) || string.IsNullOrEmpty(model.Password))
                 throw new ArgumentNullException();
 
             var users = await GetUsers();

@@ -6,6 +6,8 @@ namespace BTC.API.Models
     {
         public string Token { get; set; }
 
+        public UserValidationSuccessResponse() { }
+
         public UserValidationSuccessResponse(User user) : base(user) { }
 
         public UserValidationSuccessResponse(User user, string token) : this(user)
